@@ -1,20 +1,37 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Log from "./pages/Log";
+import Home from "./pages/Home";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <>
-      <h1>Limitchase</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <BrowserRouter>
+      <nav>
+        <Link to="/log">Change Log</Link>
+        <Link to="me">My Profile</Link>
+        <Link to="/">Home</Link>
+      </nav>
+      <Routes>
+        <Route path="log" element={<Log />} />
+        <Route path="users/*" element={<Users />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+function Users() {
+  return (
+    <div>
+      <nav>
+        <Link to="me">My Profile</Link>
+      </nav>
+
+      <Routes>
+        <Route path=":id" element={<h1>id</h1>} />
+        <Route path="me" element={<h1>me</h1>} />
+      </Routes>
+    </div>
   );
 }
 
