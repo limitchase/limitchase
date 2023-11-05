@@ -2,17 +2,28 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Log from "./pages/Log";
 import Home from "./pages/Home";
+import PizzaMenu from "./pages/PizzaMenu";
 
 const App = () => {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/log">Change Log</Link>
-        <Link to="me">My Profile</Link>
-        <Link to="/">Home</Link>
+        <p>
+          <Link to="/log">Change Log</Link>
+        </p>
+        <p>
+          <Link to="me">My Profile</Link>
+        </p>
+        <p>
+          <Link to="pizza-menu">Pizza Menu</Link>
+        </p>
+        <p>
+          <Link to="/">Home</Link>
+        </p>
       </nav>
       <Routes>
         <Route path="log" element={<Log />} />
+        <Route path="pizza-menu" element={<PizzaMenu />} />
         <Route path="users/*" element={<Users />} />
         <Route path="/" element={<Home />} />
       </Routes>
