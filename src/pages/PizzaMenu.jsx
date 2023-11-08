@@ -107,12 +107,6 @@ function Pizza({ pizzaObj }) {
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
 
-        {/* {pizzaObj.soldOut ? (
-          <span>SOLD OUT</span>
-        ) : (
-          <span>{pizzaObj.price}</span>
-        )} */}
-
         <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>
     </li>
@@ -125,11 +119,6 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
-
-  // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
-  // else alert("Sorry we're closed");
-
-  // if (!isOpen) return <p>CLOSED</p>;
 
   return (
     <footer className="footer">
