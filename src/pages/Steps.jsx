@@ -39,10 +39,6 @@ function Steps() {
       setStep((s) => s + 1);
       // setStep((s) => s + 1);
     }
-
-    // BAD PRACTICE
-    // test.name = "Fred";
-    // setTest({ name: "Fred" });
   }
 
   return (
