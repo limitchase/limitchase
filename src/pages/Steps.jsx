@@ -19,7 +19,6 @@ export default function App() {
         <p>Read children prop</p>
         <p>😎</p>
       </StepMessage>
-      {/* <Steps /> */}
     </div>
   );
 }
@@ -28,8 +27,6 @@ function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
-  // const [test, setTest] = useState({ name: "Jonas" });
-
   function handlePrevious() {
     if (step > 1) setStep((s) => s - 1);
   }
@@ -37,7 +34,6 @@ function Steps() {
   function handleNext() {
     if (step < 3) {
       setStep((s) => s + 1);
-      // setStep((s) => s + 1);
     }
   }
 
