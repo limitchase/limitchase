@@ -17,7 +17,6 @@ export default function App() {
       </StepMessage>
       <StepMessage step={2}>
         <p>Read children prop</p>
-        <p>😎</p>
       </StepMessage>
     </div>
   );
