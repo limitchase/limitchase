@@ -33,19 +33,4 @@ const App = () => {
   );
 };
 
-// function Users() {
-//   return (
-//     <div>
-//       <nav>
-//         <Link to="me">My Profile</Link>
-//       </nav>
-
-//       <Routes>
-//         <Route path=":id" element={<h1>id</h1>} />
-//         <Route path="me" element={<h1>me</h1>} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
 export default App;
