@@ -4,6 +4,7 @@ import Log from "./pages/Log";
 import Home from "./pages/Home";
 import PizzaMenu from "./pages/PizzaMenu";
 import Steps from "./pages/Steps";
+import Handyman from "./pages/Handyman";
 
 const App = () => {
   return (
@@ -21,11 +22,15 @@ const App = () => {
         <p>
           <Link to="/pizza-menu">Pizza Menu</Link>
         </p>
+        <p>
+          <Link to="/handyman">Handyman</Link>
+        </p>
       </nav>
       <Routes>
         <Route path="log" element={<Log />} />
         <Route path="pizza-menu" element={<PizzaMenu />} />
         <Route path="steps" element={<Steps />} />
+        <Route path="handyman" element={<Handyman />} />
         {/* <Route path="users/*" element={<Users />} /> */}
         <Route path="/" element={<Home />} />
       </Routes>
